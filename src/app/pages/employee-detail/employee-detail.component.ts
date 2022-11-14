@@ -30,7 +30,6 @@ export class EmployeeDetailComponent implements OnInit {
     this.loadDetailEmp();
 
     this.route.queryParams.subscribe((data) => {
-      console.log(data);
       this.tmpParams = data;
       this.paramSort = this.tmpParams.sort;
       this.paramInquiry = this.tmpParams.inquiry;
