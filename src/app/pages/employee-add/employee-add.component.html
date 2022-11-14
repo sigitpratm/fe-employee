@@ -1,0 +1,86 @@
+<div class="space-y-8 p-0 md:p-8">
+    <p class="text-2xl font-medium">Add New Employee</p>
+
+    <div [formGroup]="formAdd" class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <!-- username -->
+        <div class="p-inputgroup col-span-1 md:col-span-4">
+            <span class="p-inputgroup-addon"><i class="pi pi-at"></i></span>
+            <input formControlName="username" type="text" id="username" pInputText class="w-full"
+                placeholder="Username" />
+        </div>
+
+        <!-- firstname -->
+        <div class="p-inputgroup col-span-1 md:col-span-4">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input formControlName="firstName" type="text" id="firstname" pInputText class=" w-full"
+                placeholder="First name" />
+        </div>
+
+        <!-- lastname -->
+        <div class="p-inputgroup col-span-1 md:col-span-4">
+            <span class="p-inputgroup-addon"><i class="pi pi-users"></i></span>
+            <input formControlName="lastName" type="text" id="lastname" pInputText class=" w-full"
+                placeholder="Last name" />
+        </div>
+
+        <!-- email -->
+        <div class="p-inputgroup col-span-1 md:col-span-4">
+            <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+            <input formControlName="email" type="email" id="email" pInputText class=" w-full" placeholder="Email" />
+        </div>
+
+        <!-- birthdate -->
+        <div class="p-inputgroup col-span-1 md:col-span-4">
+            <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+            <p-calendar formControlName="birthDate" class="main-calendar" [maxDate]="maxDateStart"
+                dateFormat="dd/mm/yy" appendTo="body" placeholder="Birthday"></p-calendar>
+        </div>
+
+        <!-- salary -->
+        <div class="p-inputgroup col-span-1 md:col-span-4">
+            <span class="p-inputgroup-addon"><i class="pi pi-dollar"></i></span>
+            <input formControlName="basicSalary" type="number" id="basicsalary" placeholder="Basic salary" pInputText
+                class=" w-full" />
+        </div>
+
+        <!-- status -->
+        <div class="p-inputgroup col-span-1 md:col-span-6">
+            <span class="p-inputgroup-addon"><i class="pi pi-user-edit"></i></span>
+            <input formControlName="status" type="text" id="status" placeholder="Status" pInputText class=" w-full" />
+        </div>
+
+        <!-- group -->
+        <div class="p-inputgroup col-span-1 md:col-span-6">
+            <span class="p-inputgroup-addon"><i class="pi pi-sitemap"></i></span>
+            <select formControlName="group" class="w-full border border-gray-300 rounded px-2">
+                <option value="marketing">Marketing</option>
+                <option value="services">Services</option>
+                <option value="business development">Business Development</option>
+                <option value="legal">Legal</option>
+                <option value="engineering">Engineering</option>
+                <option value="marketing">Marketing</option>
+                <option value="accounting">Accounting</option>
+                <option value="sales">Sales</option>
+                <option value="human resources">Human Resources</option>
+                <option value="product management">Product Management</option>
+            </select>
+        </div>
+
+        <!-- description -->
+        <div class="p-inputgroup col-span-1 md:col-span-12">
+            <span class="p-inputgroup-addon"><i class="pi pi-align-left"></i></span>
+            <textarea class="border border-gray-300 rounded  w-full p-3" formControlName="description" type="text"
+                id="status" placeholder="Description" pInputText class=" w-full"> </textarea>
+        </div>
+
+        <div class="col-span-1 md:col-span-4 space-x-6">
+            <p-button routerLink="/employee" label="Cancel" styleClass="p-button-sm p-button-warning"
+                icon="pi pi-times">
+            </p-button>
+            <p-button label="Submit" styleClass="p-button-sm" icon="pi pi-send" (click)="onSaveAdd()"></p-button>
+        </div>
+    </div>
+
+</div>
+
+<p-toast></p-toast>

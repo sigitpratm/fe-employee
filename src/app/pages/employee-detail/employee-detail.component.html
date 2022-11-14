@@ -1,0 +1,61 @@
+<div class="p-0 md:p-4 space-y-8">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4">
+        <h1 class="text-3xl font-medium">Employee Details</h1>
+        <button (click)="handleOk()" pButton pRipple type="button" icon="pi pi-check" label="Ok"
+            class="p-button-outlined"></button>
+    </div>
+
+    <div class="border rounded-xl p-6 grid grid-cols-4">
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-user"></i>
+            <p class="text-gray-500 font-medium text-2xl">Username</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.username }}</p>
+        </div>
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-user"></i>
+            <p class="text-gray-500 font-medium text-2xl">First Name</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.firstName }}</p>
+        </div>
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-user"></i>
+            <p class="text-gray-500 font-medium text-2xl">Last Name</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.lastName }}</p>
+        </div>
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-envelope"></i>
+            <p class="text-gray-500 font-medium text-2xl">Email</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.email }}</p>
+        </div>
+    </div>
+
+    <div class="border rounded-xl p-6 grid grid-cols-4">
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-calendar"></i>
+            <p class="text-gray-500 font-medium text-2xl">Birthday</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.birthDate }}</p>
+        </div>
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-dollar"></i>
+            <p class="text-gray-500 font-medium text-2xl">Basic Salary</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.basicSalary | currency : "Rp " }}</p>
+        </div>
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-user-edit"></i>
+            <p class="text-gray-500 font-medium text-2xl">Status</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.status }}</p>
+        </div>
+        <div class="space-y-2 mb-12 md:mb-0 col-span-4 md:col-span-1">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-sitemap"></i>
+            <p class="text-gray-500 font-medium text-2xl">Group</p>
+            <p class="capitalize text-gray-600 text-md">{{ detailEmp?.group }}</p>
+        </div>
+    </div>
+
+    <div class="border rounded-xl p-6 grid grid-cols-4">
+        <div class="space-y-2 md:col-span-4">
+            <i style="font-size: 1.5rem" class="text-indigo-400 pi pi-align-left"></i>
+            <p class="text-gray-500 font-medium text-2xl">Description</p>
+            <p class="text-gray-600 text-md">{{ detailEmp?.description }}</p>
+        </div>
+    </div>
+</div>
