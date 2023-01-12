@@ -50,6 +50,7 @@
                     <th class="min-w-[3rem] md:min-w-[2rem] py-4 text-center">No</th>
                     <th class="min-w-[10rem] md:min-w-[6rem] py-4 text-center">First Name</th>
                     <th class="min-w-[10rem] md:min-w-[6rem] py-4 text-center">Last Name</th>
+                    <th class="min-w-[10rem] md:min-w-[6rem] py-4 text-center">Date</th>
                     <th class="min-w-[16rem] md:min-w-[6rem] py-4 text-center">Group</th>
                     <th class="min-w-[16rem] md:min-w-[6rem] py-4 text-center">Email</th>
                     <th class="min-w-[10rem] md:min-w-[6rem] py-4 text-center w-44">Action</th>
@@ -65,6 +66,10 @@
                     </td>
                     <td class="py-2 whitespace-nowrap text-center">
                         {{ data?.lastName }}
+                    </td>
+                    <td class="py-2 whitespace-nowrap text-center">
+                        <!-- {{ data?.birthDate | date }} -->
+                        {{ data?.birthDate | date: 'longDate' }}
                     </td>
                     <td class="py-2 whitespace-nowrap text-center">
                         {{ data?.group }}

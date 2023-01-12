@@ -3,6 +3,7 @@ import { EmployeeService } from '../employee.service';
 import { MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-employee-detail',

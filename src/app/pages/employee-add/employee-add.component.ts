@@ -24,6 +24,9 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService],
 })
 export class EmployeeAddComponent implements OnInit {
+  value: string = '0';
+  @ViewChild('inputNumber', { static: false }) inputNumber: any;
+
   maxDateStart = new Date();
   pipe = new DatePipe('en-US');
 
@@ -47,6 +50,18 @@ export class EmployeeAddComponent implements OnInit {
   });
 
   ngOnInit(): void {}
+
+  // numberFormat(value: string) {
+  //   let regexp = /^([0-9][0-9]?)(\.([0-9][0-9]?)?)?$/;
+  //   if (!value) {
+  //     this.value = '';
+  //   }
+  //   if (!regexp.test(value)) {
+  //     this.inputNumber.nativeElement.value = this.value;
+  //   } else {
+  //     this.value = value;
+  //   }
+  // }
 
   onSaveAdd() {
     let tmpBd = this.pipe.transform(this.formAdd.value.birthDate, 'shortDate');
